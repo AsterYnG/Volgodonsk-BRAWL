@@ -13,19 +13,28 @@ function OnCloseButtonClicked() {
     GameEvents.SendCustomGameEventToServer("ui_panel_closed", {});
 }
 
-GameEvents.Subscribe("example_event", (data: NetworkedData<ExampleEventData>) => {
-    const myNumber = data.myNumber;
-    const myString = data.myString;
+GameEvents.Subscribe(
+    "example_event",
+    (data: NetworkedData<ExampleEventData>) => {
+        const myNumber = data.myNumber;
+        const myString = data.myString;
 
-    const myBoolean = data.myBoolean; // After sending to client this is now type 0 | 1!
+        const myBoolean = data.myBoolean; // After sending to client this is now type 0 | 1!
 
-    const myArrayObject = data.myArrayOfNumbers; // After sending this is now an object!
+        const myArrayObject = data.myArrayOfNumbers; // After sending this is now an object!
 
-    const myArray = toArray(myArrayObject); // We can turn it back into an array ourselves.
+        const myArray = toArray(myArrayObject); // We can turn it back into an array ourselves.
 
-    $.Msg("Received example event", myNumber, myString, myBoolean, myArrayObject, myArray);
-
-});
+        $.Msg(
+            "Received example event",
+            myNumber,
+            myString,
+            myBoolean,
+            myArrayObject,
+            myArray
+        );
+    }
+);
 
 /**
  * Turn a table object into an array.
@@ -34,7 +43,7 @@ GameEvents.Subscribe("example_event", (data: NetworkedData<ExampleEventData>) =>
  */
 function toArray<T>(obj: Record<number, T>): T[] {
     const result = [];
-    
+
     let key = 1;
     while (obj[key]) {
         result.push(obj[key]);

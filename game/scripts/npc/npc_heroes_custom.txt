@@ -1,0 +1,16 @@
+// Dota Heroes File
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// Александр Гей
+	//=================================================================================================================
+	"npc_dota_hero_spirit_breaker_sanya"
+	{
+		"override_hero"				"npc_dota_hero_spirit_breaker"
+		"Ability3"                  "greater_bash_sanya"
+		"Ability2"					"slardar_bash_sanya"
+		"Ability1"					"time_lock_sanya"
+	}
+}

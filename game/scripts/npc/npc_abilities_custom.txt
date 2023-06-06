@@ -1,5 +1,155 @@
-#base "heroes/meepo.kv"
+
 
 "DOTAAbilities"
 {
+    "greater_bash_sanya"
+    {
+    "BaseClass"                     "ability_lua"
+    "AbilityTextureName"            "spirit_breaker_greater_bash"
+    "ScriptFile"                      "abilities/heroes/sanya/greater_bash_sanya"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityType"                    "DOTA_ABILITY_TYPE_BASIC"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+    "FightRecapLevel"               "1"
+    "AbilitySound"                  "Hero_Spirit_Breaker.GreaterBash"
+
+    // Time
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "0.5 0.5 0.5 0.5"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance_pct"			"17 17 17 17"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage"				"100 200 300 400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"0.1 0.4 1.5 2.8"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"knockback_duration"	"0.5 0.5 0.5 0.5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"knockback_distance"	"143 152 158 162"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"knockback_height"		"50 50 50 50"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movespeed_pct"	"15 15 15 15"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"movespeed_duration"	"3.0 3.0 3.0 3.0"
+			}
+    }
+    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+
+	"slardar_bash_sanya"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/heroes/sanya/slardar_bash_sanya"
+		"AbilityTextureName"			"slardar_bash"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilitySound"					"Hero_Slardar.Bash"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"		"25"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"50 100 150 200"
+				"LinkedSpecialBonus"	"special_bonus_unique_slardar_2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"1.0 1.1 1.2 1.3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_count"			"6"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	"time_lock_sanya"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"							"ability_lua"
+		"AbilityTextureName"				"faceless_void_time_lock"
+		"ScriptFile"				"abilities/heroes/sanya/time_lock_sanya"
+
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"					"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySound"					"Hero_Faceless_Void.TimeLock.Impact"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bash_chance"				"50 50 50 50"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bash_damage"				"20 25 30 35"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bash_duration"				"3"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"cd_increase"				"0.3 0.7 1.1 1.5"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"creep_bash_duration"		"2"
+			}
+		}
+	}
 }
