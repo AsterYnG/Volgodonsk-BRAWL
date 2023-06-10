@@ -9,8 +9,53 @@
 	"npc_dota_hero_spirit_breaker_sanya"
 	{
 		"override_hero"				"npc_dota_hero_spirit_breaker"
+		"Ability6"					"marci_unleash"
 		"Ability3"                  "greater_bash_sanya"
 		"Ability2"					"slardar_bash_sanya"
-		"Ability1"					"time_lock_sanya"
+		"Ability1"					"faceless_void_time_lock"
 	}
+
+	"npc_dota_hero_ushlepok"
+	{
+		"override_hero"				"npc_dota_hero_sniper"
+		"Ability1"					"ursa_fury_swipes"
+		"Ability2"                  "antimage_mana_break"
+		"Ability3"					"weaver_geminate_attack"
+		"Ability6"					"tiny_grow"
+
+		
+	}
+
+
+	"npc_dota_hero_arbuz"
+	{
+		"override_hero"				"npc_dota_hero_tidehunter"
+		"Ability1"					"antimage_counterspell"
+		"Ability2"                  "tidehunter_kraken_shell"
+		"Ability3"					"phantom_assassin_blur"
+		"Ability4"					"legion_commander_duel"
+		"Ability6"					"alchemist_chemical_rage"
+	}
+
+
+
+	"npc_dota_hero_persik"
+	{
+		"override_hero"				"npc_dota_hero_necrolyte"
+		"Ability1"					"pudge_rot"
+		"Ability2"                  "viper_corrosive_skin"
+		"Ability3"					"necrolyte_heartstopper_aura"
+		"Ability6"					"riki_permanent_invisibility"
+	}
+
+
+	"npc_dota_hero_yarik"
+	{
+		"override_hero"				"npc_dota_hero_batrider"
+		"Ability1"					"brewmaster_cinder_brew"
+		"Ability2"                  "spirit_breaker_charge_of_darkness"
+		"Ability3"					"dragon_knight_breathe_fire"
+		"Ability6"					"batrider_flaming_lasso"
+	}
+
 }
