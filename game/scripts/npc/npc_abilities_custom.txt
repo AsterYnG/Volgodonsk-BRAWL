@@ -258,8 +258,11 @@
 
 	//USHLEPOK
 	//-------------------------------------------------------------------------------------------------------------
-	"weaver_geminate_attack"
+	"geminate_attack_ushlepok"
 	{
+		"BaseClass"							"ability_lua"
+		"AbilityTextureName"				"weaver_geminate_attack"
+		"ScriptFile"				"abilities/heroes/ushlepok/geminate_attack_ushlepok"
 		// General
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
@@ -288,7 +291,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"0 0 0 0"
+				"bonus_damage"			"100 100 100 100"
 				"LinkedSpecialBonus"	"special_bonus_unique_weaver_2"
 			}
 			"04"
